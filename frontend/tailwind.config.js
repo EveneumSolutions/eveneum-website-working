@@ -86,9 +86,9 @@ export default {
             },
             boxShadow: {
                 xs: '0 1px 2px 0 rgba(0,0,0,0.05)',
-                'glow-blue': '0 0 20px oklch(0.55 0.25 260 / 0.3)',
-                'glow-green': '0 0 20px oklch(0.65 0.22 160 / 0.3)',
-                'glow-orange': '0 0 20px oklch(0.70 0.25 40 / 0.3)'
+                'glow-blue': '0 0 20px oklch(0.55 0.20 264 / 0.3)',
+                'glow-green': '0 0 20px oklch(0.60 0.18 145 / 0.3)',
+                'glow-orange': '0 0 20px oklch(0.70 0.20 35 / 0.3)'
             },
             keyframes: {
                 'accordion-down': {
