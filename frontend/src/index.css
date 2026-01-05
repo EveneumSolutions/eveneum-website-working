@@ -3,219 +3,245 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: oklch(0.98 0.01 120);
-    --foreground: oklch(0.15 0.02 280);
-    --card: oklch(0.98 0.01 120);
-    --card-foreground: oklch(0.15 0.02 280);
-    --popover: oklch(0.98 0.01 120);
-    --popover-foreground: oklch(0.15 0.02 280);
-    --primary: oklch(0.55 0.25 260);
-    --primary-foreground: oklch(0.99 0 0);
-    --secondary: oklch(0.65 0.22 160);
-    --secondary-foreground: oklch(0.99 0 0);
-    --muted: oklch(0.94 0.03 260);
-    --muted-foreground: oklch(0.45 0.05 260);
-    --accent: oklch(0.70 0.25 40);
-    --accent-foreground: oklch(0.99 0 0);
-    --destructive: oklch(0.55 0.25 25);
-    --destructive-foreground: oklch(0.99 0 0);
-    --border: oklch(0.85 0.05 260);
-    --input: oklch(0.88 0.04 260);
-    --ring: oklch(0.55 0.25 260);
-    --radius: 0.5rem;
-    --neutral: oklch(0.50 0.05 280);
-    --success: oklch(0.65 0.22 160);
-    --warning: oklch(0.70 0.25 40);
-  }
+    :root {
+        --radius: 0.625rem;
+        
+        /* Base colors - clean whites and grays */
+        --background: 0.99 0 0;
+        --foreground: 0.25 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.25 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0 0;
+        
+        /* Primary: Vibrant Blue (#1D4ED8) */
+        --primary: 0.55 0.20 264;
+        --primary-foreground: 0.99 0 0;
+        
+        /* Secondary: Fresh Green (#16A34A) */
+        --secondary: 0.60 0.18 145;
+        --secondary-foreground: 0.99 0 0;
+        
+        /* Accent: Energetic Orange (#F97316) */
+        --accent: 0.70 0.20 35;
+        --accent-foreground: 0.99 0 0;
+        
+        /* Muted: Subtle gray tones */
+        --muted: 0.96 0.01 264;
+        --muted-foreground: 0.50 0.02 264;
+        
+        /* Neutral: Professional gray from logo */
+        --neutral: 0.45 0 0;
+        --neutral-foreground: 0.99 0 0;
+        
+        /* Success: Green variant */
+        --success: 0.65 0.18 145;
+        --success-foreground: 0.99 0 0;
+        
+        /* Warning: Orange variant */
+        --warning: 0.75 0.18 50;
+        --warning-foreground: 0.15 0 0;
+        
+        /* Destructive: Red for errors */
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.99 0 0;
+        
+        /* Borders and inputs */
+        --border: 0.90 0.01 264;
+        --input: 0.90 0.01 264;
+        --ring: 0.55 0.20 264;
+        
+        /* Chart colors - vibrant palette */
+        --chart-1: 0.55 0.20 264;
+        --chart-2: 0.60 0.18 145;
+        --chart-3: 0.70 0.20 35;
+        --chart-4: 0.65 0.18 300;
+        --chart-5: 0.60 0.20 180;
+    }
 
-  .dark {
-    --background: oklch(0.15 0.02 280);
-    --foreground: oklch(0.98 0.01 120);
-    --card: oklch(0.18 0.02 280);
-    --card-foreground: oklch(0.98 0.01 120);
-    --popover: oklch(0.15 0.02 280);
-    --popover-foreground: oklch(0.98 0.01 120);
-    --primary: oklch(0.60 0.25 260);
-    --primary-foreground: oklch(0.99 0 0);
-    --secondary: oklch(0.70 0.22 160);
-    --secondary-foreground: oklch(0.15 0.02 280);
-    --muted: oklch(0.25 0.03 280);
-    --muted-foreground: oklch(0.70 0.05 260);
-    --accent: oklch(0.75 0.25 40);
-    --accent-foreground: oklch(0.15 0.02 280);
-    --destructive: oklch(0.60 0.25 25);
-    --destructive-foreground: oklch(0.99 0 0);
-    --border: oklch(0.30 0.05 280);
-    --input: oklch(0.28 0.04 280);
-    --ring: oklch(0.60 0.25 260);
-    --neutral: oklch(0.60 0.05 280);
-    --success: oklch(0.70 0.22 160);
-    --warning: oklch(0.75 0.25 40);
-  }
+    .dark {
+        --background: 0.15 0 0;
+        --foreground: 0.95 0 0;
+        --card: 0.18 0 0;
+        --card-foreground: 0.95 0 0;
+        --popover: 0.18 0 0;
+        --popover-foreground: 0.95 0 0;
+        
+        /* Primary: Lighter Blue for dark mode */
+        --primary: 0.65 0.18 264;
+        --primary-foreground: 0.15 0 0;
+        
+        /* Secondary: Lighter Green for dark mode */
+        --secondary: 0.65 0.16 145;
+        --secondary-foreground: 0.15 0 0;
+        
+        /* Accent: Lighter Orange for dark mode */
+        --accent: 0.75 0.18 35;
+        --accent-foreground: 0.15 0 0;
+        
+        --muted: 0.25 0.01 264;
+        --muted-foreground: 0.65 0.02 264;
+        
+        --neutral: 0.75 0 0;
+        --neutral-foreground: 0.15 0 0;
+        
+        --success: 0.70 0.16 145;
+        --success-foreground: 0.15 0 0;
+        
+        --warning: 0.80 0.16 50;
+        --warning-foreground: 0.15 0 0;
+        
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.95 0 0;
+        
+        --border: 0.30 0.01 264;
+        --input: 0.30 0.01 264;
+        --ring: 0.65 0.18 264;
+        
+        --chart-1: 0.65 0.18 264;
+        --chart-2: 0.65 0.16 145;
+        --chart-3: 0.75 0.18 35;
+        --chart-4: 0.70 0.16 300;
+        --chart-5: 0.65 0.18 180;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }
 
+/* Typography enhancements */
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold tracking-tight;
+    }
+    
+    .prose {
+        @apply max-w-none;
+    }
+    
+    .prose h2 {
+        @apply mt-8 mb-4 text-2xl font-bold;
+    }
+    
+    .prose h3 {
+        @apply mt-6 mb-3 text-xl font-semibold;
+    }
+    
+    .prose p {
+        @apply mb-4 leading-relaxed;
+    }
+    
+    .prose ul {
+        @apply mb-4 ml-6 list-disc space-y-2;
+    }
+    
+    .prose li {
+        @apply leading-relaxed;
+    }
 }
 
+/* Gradient backgrounds */
 @layer utilities {
-  .gradient-blue {
-    background: linear-gradient(135deg, oklch(0.94 0.05 260) 0%, oklch(0.97 0.02 260) 100%);
-  }
-
-  .gradient-green {
-    background: linear-gradient(135deg, oklch(0.94 0.05 160) 0%, oklch(0.97 0.02 160) 100%);
-  }
-
-  .gradient-orange {
-    background: linear-gradient(135deg, oklch(0.94 0.05 40) 0%, oklch(0.97 0.02 40) 100%);
-  }
-
-  .gradient-multi {
-    background: linear-gradient(135deg, oklch(0.94 0.05 260) 0%, oklch(0.94 0.05 160) 50%, oklch(0.94 0.05 40) 100%);
-  }
-
-  .btn-gradient-primary {
-    background: linear-gradient(135deg, oklch(0.55 0.25 260) 0%, oklch(0.60 0.23 265) 100%);
-    @apply text-primary-foreground shadow-md transition-all hover:shadow-lg hover:brightness-110;
-  }
-
-  .btn-gradient-secondary {
-    background: linear-gradient(135deg, oklch(0.65 0.22 160) 0%, oklch(0.70 0.20 165) 100%);
-    @apply text-secondary-foreground shadow-md transition-all hover:shadow-lg hover:brightness-110;
-  }
-
-  .btn-gradient-accent {
-    background: linear-gradient(135deg, oklch(0.70 0.25 40) 0%, oklch(0.75 0.23 45) 100%);
-    @apply text-accent-foreground shadow-md transition-all hover:shadow-lg hover:brightness-110;
-  }
-
-  .btn-gradient-blue {
-    background: linear-gradient(135deg, oklch(0.55 0.25 260) 0%, oklch(0.60 0.23 265) 100%);
-    @apply text-primary-foreground shadow-md transition-all hover:shadow-lg hover:brightness-110;
-  }
-
-  .btn-gradient-green {
-    background: linear-gradient(135deg, oklch(0.65 0.22 160) 0%, oklch(0.70 0.20 165) 100%);
-    @apply text-secondary-foreground shadow-md transition-all hover:shadow-lg hover:brightness-110;
-  }
-
-  .btn-gradient-orange {
-    background: linear-gradient(135deg, oklch(0.70 0.25 40) 0%, oklch(0.75 0.23 45) 100%);
-    @apply text-accent-foreground shadow-md transition-all hover:shadow-lg hover:brightness-110;
-  }
-
-  .card-hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
-  }
-
-  .card-blue {
-    @apply border-l-4 border-l-primary;
-  }
-
-  .card-green {
-    @apply border-l-4 border-l-secondary;
-  }
-
-  .card-orange {
-    @apply border-l-4 border-l-accent;
-  }
-
-  .section-divider {
-    @apply relative inline-block;
-  }
-
-  .section-divider::after {
-    content: '';
-    @apply absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent;
-  }
-
-  .section-divider-center {
-    @apply relative inline-block;
-  }
-
-  .section-divider-center::after {
-    content: '';
-    @apply absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent;
-  }
-
-  .expertise-card {
-    @apply rounded-lg border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md;
-  }
-
-  .expertise-card-blue {
-    @apply border-l-4 border-l-primary;
-  }
-
-  .expertise-card-green {
-    @apply border-l-4 border-l-secondary;
-  }
-
-  .expertise-card-orange {
-    @apply border-l-4 border-l-accent;
-  }
-
-  .expertise-card-neutral {
-    @apply border-l-4 border-l-neutral;
-  }
-
-  .expertise-card-success {
-    @apply border-l-4 border-l-success;
-  }
+    .gradient-blue {
+        background: linear-gradient(135deg, oklch(0.65 0.15 264 / 0.1) 0%, oklch(0.99 0 0) 100%);
+    }
+    
+    .gradient-green {
+        background: linear-gradient(135deg, oklch(0.70 0.12 145 / 0.1) 0%, oklch(0.99 0 0) 100%);
+    }
+    
+    .gradient-orange {
+        background: linear-gradient(135deg, oklch(0.75 0.15 35 / 0.1) 0%, oklch(0.99 0 0) 100%);
+    }
+    
+    .gradient-multi {
+        background: linear-gradient(135deg, 
+            oklch(0.65 0.12 264 / 0.08) 0%, 
+            oklch(0.70 0.10 145 / 0.08) 50%, 
+            oklch(0.75 0.12 35 / 0.08) 100%);
+    }
+    
+    .section-divider {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .section-divider::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, 
+            oklch(0.55 0.20 264), 
+            oklch(0.60 0.18 145), 
+            oklch(0.70 0.20 35));
+        border-radius: 2px;
+    }
+    
+    .section-divider-center {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .section-divider-center::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, 
+            oklch(0.55 0.20 264), 
+            oklch(0.60 0.18 145), 
+            oklch(0.70 0.20 35));
+        border-radius: 2px;
+    }
 }
 
-/* Prose styling for blog content */
-.prose {
-  @apply text-foreground;
+/* Enhanced button states */
+@layer components {
+    .btn-gradient-blue {
+        @apply bg-gradient-to-r from-primary to-[oklch(0.60_0.18_264)] text-primary-foreground;
+        @apply hover:from-[oklch(0.50_0.22_264)] hover:to-[oklch(0.55_0.20_264)];
+        @apply transition-all duration-300 shadow-lg hover:shadow-xl;
+    }
+    
+    .btn-gradient-green {
+        @apply bg-gradient-to-r from-secondary to-[oklch(0.65_0.16_145)] text-secondary-foreground;
+        @apply hover:from-[oklch(0.55_0.20_145)] hover:to-[oklch(0.60_0.18_145)];
+        @apply transition-all duration-300 shadow-lg hover:shadow-xl;
+    }
+    
+    .btn-gradient-orange {
+        @apply bg-gradient-to-r from-accent to-[oklch(0.75_0.18_35)] text-accent-foreground;
+        @apply hover:from-[oklch(0.65_0.22_35)] hover:to-[oklch(0.70_0.20_35)];
+        @apply transition-all duration-300 shadow-lg hover:shadow-xl;
+    }
 }
 
-.prose h2 {
-  @apply mb-4 mt-8 text-2xl font-bold text-foreground;
-}
-
-.prose h3 {
-  @apply mb-3 mt-6 text-xl font-semibold text-foreground;
-}
-
-.prose p {
-  @apply mb-4 leading-relaxed text-muted-foreground;
-}
-
-.prose ul,
-.prose ol {
-  @apply mb-4 ml-6 space-y-2;
-}
-
-.prose li {
-  @apply text-muted-foreground;
-}
-
-.prose strong {
-  @apply font-semibold text-foreground;
-}
-
-.prose a {
-  @apply text-primary underline-offset-4 hover:underline;
-}
-
-.prose blockquote {
-  @apply border-l-4 border-primary pl-4 italic text-muted-foreground;
-}
-
-.prose code {
-  @apply rounded bg-muted px-1.5 py-0.5 font-mono text-sm;
-}
-
-.prose pre {
-  @apply overflow-x-auto rounded-lg bg-muted p-4;
-}
-
-.prose img {
-  @apply rounded-lg;
+/* Card enhancements with color accents */
+@layer components {
+    .card-blue {
+        @apply border-l-4 border-l-primary;
+    }
+    
+    .card-green {
+        @apply border-l-4 border-l-secondary;
+    }
+    
+    .card-orange {
+        @apply border-l-4 border-l-accent;
+    }
+    
+    .card-hover-lift {
+        @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+    }
 }
